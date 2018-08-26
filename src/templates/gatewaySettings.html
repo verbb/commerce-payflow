@@ -1,0 +1,48 @@
+{% from "_includes/forms" import textField, lightswitchField %}
+
+{{ textField({
+    label: 'API Username' | t('commerce'),
+    instructions: "Your Payflow API username." | t('commerce'),
+    id: 'username',
+    class: 'ltr',
+    name: 'username',
+    value: gateway.username,
+    errors: gateway.getErrors('username')
+}) }}
+
+{{ textField({
+    label: "API Password" | t('commerce'),
+    instructions: "Your Payflow API password." | t('commerce'),
+    id: 'password',
+    class: 'ltr',
+    name: 'password',
+    value: gateway.password,
+    errors: gateway.getErrors('password')
+}) }}
+
+{{ textField({
+    label: "Partner" | t('commerce'),
+    instructions: "The Payflow partner. This may be PayPal, or if an account was provided by an authorized PayPal reseller, who registered a Payflow user, then the ID provided by the reseller is used." | t('commerce'),
+    id: 'partner',
+    class: 'ltr',
+    name: 'partner',
+    value: gateway.partner,
+    errors: gateway.getErrors('partner')
+}) }}
+
+{{ textField({
+    label: "Vendor" | t('commerce'),
+    instructions: "The ID that you specified when you got the Payflow account, the same as the username unless you have created additional users on the account. That is, the merchant login ID for the account." | t('commerce'),
+    id: 'vendor',
+    class: 'ltr',
+    name: 'vendor',
+    value: gateway.vendor,
+    errors: gateway.getErrors('vendor')
+}) }}
+
+ {{ lightswitchField({
+     label: "Test mode?" | t('commerce'),
+     name: 'testMode',
+     on: gateway.testMode,
+     errors: gateway.getErrors('testMode'),
+ }) }}

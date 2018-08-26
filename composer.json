@@ -1,0 +1,49 @@
+{
+    "name": "verbb/commerce-payflow",
+    "description": "PayPal Payflow payment gateway plugin for Craft Commerce 2",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "paypal",
+        "payflow",
+        "omnipay",
+        "commerce"
+    ],
+    "support": {
+        "email": "support@verbb.io",
+        "issues": "https://github.com/verbb/commerce-payflow/issues?state=open",
+        "source": "https://github.com/verbb/commerce-payflow",
+        "docs": "https://github.com/verbb/commerce-payflow",
+        "rss": "https://github.com/verbb/commerce-payflow/commits/v2.atom"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Verbb",
+            "homepage": "https://verbb.io"
+        }
+    ],
+    "require": {
+        "craftcms/commerce": "^2.0.0-alpha.6",
+        "craftcms/commerce-omnipay": "^1.0.0",
+        "omnipay/payflow": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "verbb\\payflow\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "PayPal Payflow",
+        "handle": "commerce-payflow",
+        "schemaVersion": "1.0.0",
+        "hasCpSettings": true,
+        "hasCpSection": true,
+        "changelogUrl": "https://raw.githubusercontent.com/verbb/commerce-payflow/master/CHANGELOG.md",
+        "class": "verbb\\payflow\\Payflow"
+    }
+}
