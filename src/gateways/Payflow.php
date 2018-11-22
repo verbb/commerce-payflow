@@ -70,6 +70,7 @@ class Payflow extends CreditCardGateway
         $gateway->setPartner($this->partner);
         $gateway->setVendor($this->vendor);
         $gateway->setTestMode($this->testMode);
+        $gateway->setCurrency('AUD');
 
         return $gateway;
     }
