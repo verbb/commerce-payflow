@@ -50,7 +50,9 @@ class Payflow extends CreditCardGateway
         parent::populateRequest($request, $paymentForm);
 
         // Temp Fix for "Invalid or unsupported currency code" - investigate more!
-        $request['currency'] = 'AUD';
+        if ($this->testMode) {
+            $request['currency'] = null;
+        }
 
         if ($paymentForm && $paymentForm->hasProperty('cardReference') && $paymentForm->cardReference) {
             $request['cardReference'] = $paymentForm->cardReference;
@@ -70,7 +72,6 @@ class Payflow extends CreditCardGateway
         $gateway->setPartner($this->partner);
         $gateway->setVendor($this->vendor);
         $gateway->setTestMode($this->testMode);
-        $gateway->setCurrency('AUD');
 
         return $gateway;
     }
