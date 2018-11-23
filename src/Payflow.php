@@ -13,6 +13,11 @@ use yii\base\Event;
 
 class Payflow extends Plugin
 {
+    // Public Properties
+    // =========================================================================
+
+    public $schemaVersion = '1.0.0';
+
     // Public Methods
     // =========================================================================
 

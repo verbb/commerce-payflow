@@ -26,3 +26,10 @@ To install the plugin, follow these instructions.
 ## Setup
 
 To add the payment gateway, go to Commerce → Settings → Gateways, create a new gateway, and set the gateway type Payflow”.
+
+<h2></h2>
+
+<a href="https://verbb.io" target="_blank">
+  <img width="100" src="https://verbb.io/assets/img/verbb-pill.svg">
+</a>
+

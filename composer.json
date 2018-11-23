@@ -41,9 +41,6 @@
     "extra": {
         "name": "PayPal Payflow",
         "handle": "commerce-payflow",
-        "schemaVersion": "1.0.0",
-        "hasCpSettings": false,
-        "hasCpSection": false,
         "changelogUrl": "https://raw.githubusercontent.com/verbb/commerce-payflow/master/CHANGELOG.md",
         "class": "verbb\\payflow\\Payflow"
     }
