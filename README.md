@@ -7,7 +7,7 @@ It provides PayPal Payflow Pro gateway.
 
 ## Requirements
 
-This plugin requires Craft Commerce 2.0.0-alpha.5 or later.
+This plugin requires Craft Commerce 2.1 or later.
 
 ## Installation
 
