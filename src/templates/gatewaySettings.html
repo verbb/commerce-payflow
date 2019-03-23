@@ -1,41 +1,45 @@
-{% from "_includes/forms" import textField, lightswitchField %}
+{% from "_includes/forms" import textField, lightswitchField, autosuggestField %}
 
-{{ textField({
+{{ autosuggestField({
     label: 'API Username' | t('commerce'),
     instructions: "Your Payflow API username." | t('commerce'),
     id: 'username',
     class: 'ltr',
     name: 'username',
+    suggestEnvVars: true,
     value: gateway.username,
     errors: gateway.getErrors('username')
 }) }}
 
-{{ textField({
+{{ autosuggestField({
     label: "API Password" | t('commerce'),
     instructions: "Your Payflow API password." | t('commerce'),
     id: 'password',
     class: 'ltr',
     name: 'password',
+    suggestEnvVars: true,
     value: gateway.password,
     errors: gateway.getErrors('password')
 }) }}
 
-{{ textField({
+{{ autosuggestField({
     label: "Partner" | t('commerce'),
     instructions: "The Payflow partner. This may be PayPal, or if an account was provided by an authorized PayPal reseller, who registered a Payflow user, then the ID provided by the reseller is used." | t('commerce'),
     id: 'partner',
     class: 'ltr',
     name: 'partner',
+    suggestEnvVars: true,
     value: gateway.partner,
     errors: gateway.getErrors('partner')
 }) }}
 
-{{ textField({
+{{ autosuggestField({
     label: "Vendor" | t('commerce'),
     instructions: "The ID that you specified when you got the Payflow account, the same as the username unless you have created additional users on the account. That is, the merchant login ID for the account." | t('commerce'),
     id: 'vendor',
     class: 'ltr',
     name: 'vendor',
+    suggestEnvVars: true,
     value: gateway.vendor,
     errors: gateway.getErrors('vendor')
 }) }}

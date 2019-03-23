@@ -65,12 +65,12 @@ class Payflow extends CreditCardGateway
 
     protected function createGateway(): AbstractGateway
     {
-        $gateway = Omnipay::create('Payflow_Pro');
+        $gateway = static::createOmnipayGateway('Payflow_Pro');
 
-        $gateway->setUsername($this->username);
-        $gateway->setPassword($this->password);
-        $gateway->setPartner($this->partner);
-        $gateway->setVendor($this->vendor);
+        $gateway->setUsername(Craft::parseEnv($this->username));
+        $gateway->setPassword(Craft::parseEnv($this->password));
+        $gateway->setPartner(Craft::parseEnv($this->partner));
+        $gateway->setVendor(Craft::parseEnv($this->vendor));
         $gateway->setTestMode($this->testMode);
 
         return $gateway;
