@@ -1,6 +1,11 @@
 # Changelog
 =========
 
+## 2.1.0 - 2019-05-16
+
+### Added
+- Add support for Commerce 3.0+
+
 ## 2.0.0 - 2019-03-23
 
 ### Added
