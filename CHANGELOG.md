@@ -1,6 +1,11 @@
 # Changelog
 =========
 
+## 2.1.1 - 2020-08-05
+
+### Fixed
+- Fix fatal error when using an invalid card, and saving as a payment source.
+
 ## 2.1.0 - 2020-05-16
 
 ### Added
