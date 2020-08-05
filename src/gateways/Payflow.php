@@ -7,6 +7,7 @@ use Craft;
 use craft\helpers\StringHelper;
 use craft\commerce\omnipay\base\CreditCardGateway;
 use craft\commerce\models\payments\BasePaymentForm;
+use craft\commerce\models\PaymentSource;
 
 use Omnipay\Common\AbstractGateway;
 use Omnipay\Common\Message\ResponseInterface;
@@ -56,6 +57,18 @@ class Payflow extends CreditCardGateway
 
         if ($paymentForm && $paymentForm->hasProperty('cardReference') && $paymentForm->cardReference) {
             $request['cardReference'] = $paymentForm->cardReference;
+        }
+    }
+
+    public function createPaymentSource(BasePaymentForm $sourceData, int $userId): PaymentSource
+    {
+        try {
+            // Without a try/catch, we'll get an internal server error for a failed card.
+            // At least in Commerce 2.2.18.
+            return parent::createPaymentSource($sourceData, $userId);
+        } catch (\Throwable $e) {
+            // Have to return something here
+            return new PaymentSource();
         }
     }
 
