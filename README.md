@@ -27,6 +27,10 @@ To install the plugin, follow these instructions.
 
 To add the payment gateway, go to Commerce → Settings → Gateways, create a new gateway, and set the gateway type Payflow”.
 
+## Show your Support
+
+PayPal Payflow is licensed under the MIT license, meaning it will always be free and open source – we love free stuff! If you'd like to show your support to the plugin regardless, [Sponsor](https://github.com/sponsors/verbb) development.
+
 <h2></h2>
 
 <a href="https://verbb.io" target="_blank">
