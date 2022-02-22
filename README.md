@@ -1,9 +1,6 @@
-PayPal Payflow payment gateway plugin for Craft Commerce 2
-=======================
+# PayPal Payflow for Craft Commerce
 
-This plugin provides [PayPal Payflow](https://developer.paypal.com/docs/classic/products/payflow-gateway/) integrations for [Craft Commerce](https://craftcommerce.com/).
-
-It provides PayPal Payflow Pro gateway.
+Adds support for [PayPal Payflow](https://developer.paypal.com/docs/classic/products/payflow-gateway/) as a payment gateway.
 
 ## Requirements
 
