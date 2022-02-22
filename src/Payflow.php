@@ -7,6 +7,7 @@ use Craft;
 use craft\base\Plugin;
 use craft\events\RegisterComponentTypesEvent;
 
+use craft\commerce\Plugin as Commerce;
 use craft\commerce\services\Gateways;
 use craft\commerce\omnipay\events\SendPaymentRequestEvent;
 use craft\commerce\omnipay\base\Gateway as Gateway;
@@ -36,7 +37,7 @@ class Payflow extends Plugin
         // `Invalid or unsupported currency code` otherwise
         Event::on(Gateway::class, Gateway::EVENT_BEFORE_SEND_PAYMENT_REQUEST, function(SendPaymentRequestEvent $e) {
             $e->modifiedRequestData = $e->requestData;
-            $e->modifiedRequestData['CURRENCY'] = 'AUD';
+            $e->modifiedRequestData['CURRENCY'] = Commerce::getInstance()->getPaymentCurrencies()->getPrimaryPaymentCurrencyIso();
         });
     }
 }
