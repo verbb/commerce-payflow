@@ -6,7 +6,7 @@ use craft\commerce\models\PaymentSource;
 
 class PayflowPaymentForm extends CreditCardPaymentForm
 {
-    public $cardReference;
+    public mixed $cardReference = null;
 
     public function populateFromPaymentSource(PaymentSource $paymentSource)
     {

@@ -4,6 +4,7 @@ namespace verbb\payflow;
 use verbb\payflow\gateways\Payflow as PayflowGateway;
 
 use Craft;
+use craft\base\Model;
 use craft\base\Plugin;
 use craft\events\RegisterComponentTypesEvent;
 
@@ -16,16 +17,16 @@ use yii\base\Event;
 
 class Payflow extends Plugin
 {
-    // Public Properties
+    // Properties
     // =========================================================================
 
-    public $schemaVersion = '1.0.0';
+    public string $schemaVersion = '1.0.0';
 
     
     // Public Methods
     // =========================================================================
 
-    public function init()
+    public function init(): void
     {
         parent::init();
 

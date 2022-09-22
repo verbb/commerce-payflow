@@ -19,13 +19,13 @@ class Payflow extends CreditCardGateway
     // Properties
     // =========================================================================
 
-    public $username;
-    public $password;
-    public $partner;
-    public $vendor;
-    public $testMode;
+    public ?string $username = null;
+    public ?string $password = null;
+    public ?string $partner = null;
+    public ?string $vendor = null;
+    public ?string $testMode = null;
 
-    public $sendCartInfo = true;
+    public bool $sendCartInfo = true;
 
 
     // Public Methods
@@ -41,7 +41,7 @@ class Payflow extends CreditCardGateway
         return new PayflowPaymentForm();
     }
 
-    public function getSettingsHtml()
+    public function getSettingsHtml(): ?string
     {
         return Craft::$app->getView()->renderTemplate('commerce-payflow/gatewaySettings', ['gateway' => $this]);
     }
@@ -103,6 +103,6 @@ class Payflow extends CreditCardGateway
 
     protected function getGatewayClassName()
     {
-        return '\\' . ProGateway::class;
+        return '\‘ . ProGateway::class;
     }
 }
