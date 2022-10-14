@@ -46,7 +46,7 @@ class Payflow extends CreditCardGateway
         return Craft::$app->getView()->renderTemplate('commerce-payflow/gatewaySettings', ['gateway' => $this]);
     }
 
-    public function populateRequest(array &$request, BasePaymentForm $paymentForm = null)
+    public function populateRequest(array &$request, BasePaymentForm $paymentForm = null): void
     {
         parent::populateRequest($request, $paymentForm);
 
@@ -101,8 +101,8 @@ class Payflow extends CreditCardGateway
         return Craft::t('commerce-payflow', '{cardType} ending in {last4}', ['cardType' => StringHelper::upperCaseFirst($type), 'last4' => $number]);
     }
 
-    protected function getGatewayClassName()
+    protected function getGatewayClassName(): ?string
     {
-        return '\‘ . ProGateway::class;
+        return '\\' . ProGateway::class;
     }
 }
