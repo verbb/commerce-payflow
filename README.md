@@ -1,6 +1,6 @@
 # PayPal Payflow for Craft Commerce
 
-Adds support for [PayPal Payflow](https://developer.paypal.com/docs/classic/products/payflow-gateway/) as a payment gateway.
+Adds support for [PayPal Payflow](https://developer.paypal.com/api/nvp-soap/payflow/payflow-gateway/) as a payment gateway.
 
 ## Requirements
 
