@@ -43,7 +43,7 @@
     "extra": {
         "name": "PayPal Payflow",
         "handle": "commerce-payflow",
-        "changelogUrl": "https://raw.githubusercontent.com/verbb/commerce-payflow/master/CHANGELOG.md",
+        "changelogUrl": "https://raw.githubusercontent.com/verbb/commerce-payflow/craft-4/CHANGELOG.md",
         "class": "verbb\\payflow\\Payflow"
     }
 }
