@@ -1,6 +1,6 @@
 {
     "name": "verbb/commerce-payflow",
-    "description": "PayPal Payflow payment gateway plugin for Craft Commerce 2",
+    "description": "PayPal Payflow payment gateway plugin for Craft Commerce",
     "type": "craft-plugin",
     "version": "3.0.0",
     "keywords": [
