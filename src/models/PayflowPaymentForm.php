@@ -8,7 +8,7 @@ class PayflowPaymentForm extends CreditCardPaymentForm
 {
     public mixed $cardReference = null;
 
-    public function populateFromPaymentSource(PaymentSource $paymentSource)
+    public function populateFromPaymentSource(PaymentSource $paymentSource) : void
     {
         $this->cardReference = $paymentSource->token;
     }
