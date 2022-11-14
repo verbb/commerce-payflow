@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.1 - 2022-11-15
+
+### Fixed
+- Fix `populateFromPaymentSource()` function definition. (thanks @mmoss128).
+
 ## 3.0.0 - 2022-10-14
 
 ### Changed
