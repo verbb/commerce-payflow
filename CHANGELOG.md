@@ -1,6 +1,11 @@
 # Changelog
 =========
 
+## 2.1.2 - 2023-03-22
+
+### Fixed
+- Fix incorrectly hard-coding `AUD` as payment currency.
+
 ## 2.1.1 - 2020-08-05
 
 ### Fixed
