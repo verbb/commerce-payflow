@@ -36,9 +36,9 @@ class Payflow extends Plugin
 
         // When using a saved card, or creating one, we must add the currency to the request - will receive 
         // `Invalid or unsupported currency code` otherwise
-        Event::on(Gateway::class, Gateway::EVENT_BEFORE_SEND_PAYMENT_REQUEST, function(SendPaymentRequestEvent $e) {
-            $e->modifiedRequestData = $e->requestData;
-            $e->modifiedRequestData['CURRENCY'] = Commerce::getInstance()->getPaymentCurrencies()->getPrimaryPaymentCurrencyIso();
+        Event::on(Gateway::class, Gateway::EVENT_BEFORE_SEND_PAYMENT_REQUEST, function(SendPaymentRequestEvent $event) {
+            $event->modifiedRequestData = $event->requestData;
+            $event->modifiedRequestData['CURRENCY'] = Commerce::getInstance()->getPaymentCurrencies()->getPrimaryPaymentCurrencyIso();
         });
     }
 }
