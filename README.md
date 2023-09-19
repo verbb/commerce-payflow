@@ -1,5 +1,5 @@
 # PayPal Payflow for Craft CMS
-<img width="500" src="https://verbb.imgix.net/plugins/payflow/payflow-social-card.png?v=1">
+<img width="500" src="https://verbb.imgix.net/plugins/paypal-payflow/payflow-social-card.png?v=1">
 
 PayPal Payflow is a Craft CMS plugin that adds support for [PayPal Payflow](https://developer.paypal.com/api/nvp-soap/payflow/payflow-gateway/) as a payment gateway for Craft Commerce.
 
