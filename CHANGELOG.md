@@ -1,6 +1,13 @@
 # Changelog
 =========
 
+## 2.2.0 - 2024-06-05
+
+### Changed
+- PayPal Payflow for Craft Commerce now requires Craft 3.7.25 or later.
+- PayPal Payflow for Craft Commerce now requires Commerce 3.3 or later.
+- PayPal Payflow for Craft Commerce now requires Commerce Omnipay v3.
+
 ## 2.1.2 - 2023-03-22
 
 ### Fixed
