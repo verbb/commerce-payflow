@@ -231,12 +231,20 @@
       "oAP" : "\/src\/Payflow.php",
       "oF" : 0
     },
-    "\/src\/templates\/gatewaySettings.html" : {
+    "\/src\/templates\/gateway.html" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/src\/templates\/gatewaySettings.html",
+      "oAP" : "\/src\/templates\/gateway.html",
+      "oF" : 0
+    },
+    "\/src\/translations\/en\/commerce-payflow.php" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/src\/translations\/en\/commerce-payflow.php",
       "oF" : 0
     }
   },
