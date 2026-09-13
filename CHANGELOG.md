@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+- Align documentation filenames with page titles and update internal links.
+- Updated documentation for clearer, more consistent guidance.
+
 ## 4.0.0 - 2024-05-27
 
 ### Changed
