@@ -27,7 +27,7 @@ class PayflowPaymentForm extends CreditCardPaymentForm
     protected function defineRules(): array
     {
         if (empty($this->cardReference)) {
-            return parent::rules();
+            return parent::defineRules();
         }
 
         return [];
