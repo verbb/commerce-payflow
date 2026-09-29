@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+### Fixed
+- Fixed a security issue affecting Payflow saved payment source references.
+
 ## 4.0.1 - 2026-09-14
 
 ### Changed

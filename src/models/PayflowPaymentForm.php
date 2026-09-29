@@ -9,15 +9,23 @@ class PayflowPaymentForm extends CreditCardPaymentForm
     // Properties
     // =========================================================================
 
-    public mixed $cardReference = null;
+    /**
+     * Stored outside the model attributes so request mass assignment cannot provide payment authority.
+     */
+    private ?string $_cardReference = null;
 
 
     // Public Methods
     // =========================================================================
 
-    public function populateFromPaymentSource(PaymentSource $paymentSource) : void
+    public function getCardReference(): ?string
     {
-        $this->cardReference = $paymentSource->token;
+        return $this->_cardReference;
+    }
+
+    public function populateFromPaymentSource(PaymentSource $paymentSource): void
+    {
+        $this->_cardReference = $paymentSource->token;
     }
 
 
@@ -26,7 +34,7 @@ class PayflowPaymentForm extends CreditCardPaymentForm
 
     protected function defineRules(): array
     {
-        if (empty($this->cardReference)) {
+        if (empty($this->_cardReference)) {
             return parent::defineRules();
         }
 

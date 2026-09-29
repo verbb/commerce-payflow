@@ -12,6 +12,8 @@ The credential fields support environment-variable suggestions. Use the credenti
 
 Choose the Payflow gateway in your store's checkout and complete a payment using the provider's approved test credentials and payment details. Use a test customer and an order you can identify in both systems.
 
+When your checkout lets a logged-in customer reuse a saved payment source, submit Commerce's standard `paymentSourceId`. The gateway resolves its provider reference from that customer-owned source; `cardReference` is internal and should not be included in checkout form data.
+
 Open that order in Commerce and inspect its transaction history. Check the payment result and the corresponding merchant-account record, rather than treating the browser's confirmation page alone as proof of payment. If the transaction failed, inspect its response message, then check the account credentials, Partner/Vendor values and test-mode selection before retrying.
 
 Your checkout determines whether it requests a purchase or an authorisation. Confirm that the resulting transaction matches the flow you intend to use, including any later capture or refund operation, before accepting live orders. Do not assume creating the gateway also implements your storefront's checkout templates.

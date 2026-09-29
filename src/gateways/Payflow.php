@@ -55,8 +55,8 @@ class Payflow extends CreditCardGateway
             $request['currency'] = null;
         }
 
-        if ($paymentForm && $paymentForm->hasProperty('cardReference') && $paymentForm->cardReference) {
-            $request['cardReference'] = $paymentForm->cardReference;
+        if ($paymentForm instanceof PayflowPaymentForm && $paymentForm->getCardReference()) {
+            $request['cardReference'] = $paymentForm->getCardReference();
         }
     }
 
