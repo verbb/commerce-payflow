@@ -50,11 +50,6 @@ class Payflow extends CreditCardGateway
     {
         parent::populateRequest($request, $paymentForm);
 
-        // Temp Fix for "Invalid or unsupported currency code" - investigate more!
-        if ($this->testMode) {
-            $request['currency'] = null;
-        }
-
         if ($paymentForm instanceof PayflowPaymentForm && $paymentForm->getCardReference()) {
             $request['cardReference'] = $paymentForm->getCardReference();
         }

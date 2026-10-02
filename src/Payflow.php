@@ -9,9 +9,8 @@ use craft\base\Plugin;
 use craft\events\RegisterComponentTypesEvent;
 
 use craft\commerce\Plugin as Commerce;
-use craft\commerce\services\Gateways;
 use craft\commerce\omnipay\events\SendPaymentRequestEvent;
-use craft\commerce\omnipay\base\Gateway as Gateway;
+use craft\commerce\services\Gateways;
 
 use yii\base\Event;
 
@@ -34,9 +33,17 @@ class Payflow extends Plugin
             $event->types[] = PayflowGateway::class;
         });
 
-        // When using a saved card, or creating one, we must add the currency to the request - will receive
-        // `Invalid or unsupported currency code` otherwise
-        Event::on(Gateway::class, Gateway::EVENT_BEFORE_SEND_PAYMENT_REQUEST, function(SendPaymentRequestEvent $event) {
+        // Payflow card-creation requests omit their currency, but transaction requests already contain the
+        // currency paired with their amount and must remain unchanged.
+        Event::on(PayflowGateway::class, PayflowGateway::EVENT_BEFORE_SEND_PAYMENT_REQUEST, function(SendPaymentRequestEvent $event) {
+            if (
+                !is_array($event->requestData) ||
+                ($event->requestData['TRXTYPE'] ?? null) !== 'L' ||
+                array_key_exists('CURRENCY', $event->requestData)
+            ) {
+                return;
+            }
+
             $event->modifiedRequestData = $event->requestData;
             $event->modifiedRequestData['CURRENCY'] = Commerce::getInstance()->getPaymentCurrencies()->getPrimaryPaymentCurrencyIso();
         });
