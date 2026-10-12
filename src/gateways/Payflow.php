@@ -4,6 +4,7 @@ namespace verbb\payflow\gateways;
 use verbb\payflow\models\PayflowPaymentForm;
 
 use Craft;
+use craft\helpers\App;
 use craft\helpers\StringHelper;
 use craft\commerce\omnipay\base\CreditCardGateway;
 use craft\commerce\models\payments\BasePaymentForm;
@@ -75,10 +76,10 @@ class Payflow extends CreditCardGateway
     {
         $gateway = static::createOmnipayGateway('Payflow_Pro');
 
-        $gateway->setUsername(Craft::parseEnv($this->username));
-        $gateway->setPassword(Craft::parseEnv($this->password));
-        $gateway->setPartner(Craft::parseEnv($this->partner));
-        $gateway->setVendor(Craft::parseEnv($this->vendor));
+        $gateway->setUsername(App::parseEnv($this->username));
+        $gateway->setPassword(App::parseEnv($this->password));
+        $gateway->setPartner(App::parseEnv($this->partner));
+        $gateway->setVendor(App::parseEnv($this->vendor));
         $gateway->setTestMode($this->testMode);
 
         return $gateway;
