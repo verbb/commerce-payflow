@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 4.0.5 - 2026-10-17
 
 ### Fixed
 - Fixed a gateway class reference that could fail on case-sensitive filesystems.
