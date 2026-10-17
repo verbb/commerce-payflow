@@ -13,7 +13,7 @@ use craft\commerce\models\PaymentSource;
 use Omnipay\Common\AbstractGateway;
 use Omnipay\Common\Message\ResponseInterface;
 use Omnipay\Omnipay;
-use Omnipay\PayFlow\ProGateway;
+use Omnipay\Payflow\ProGateway;
 
 class Payflow extends CreditCardGateway
 {
