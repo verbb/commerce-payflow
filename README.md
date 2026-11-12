@@ -11,17 +11,18 @@ Add a PayPal Payflow gateway alongside the store's other Craft Commerce gateways
 - Configure the partner, vendor, user, and password for the Payflow account.
 - Exercise payments against Payflow's test environment before launch.
 - Keep payment activity attached to the order's normal transaction history.
-- Handle gateway communication through the Craft Commerce backend.
-- Configure the gateway through Commerce alongside other payment options.
 
 ## Documentation
+
 Visit the [PayPal Payflow Plugin page](https://verbb.io/craft-plugins/paypal-payflow) for all documentation, guides, pricing and developer resources.
 
 ## Support
-Get in touch with us via the [PayPal Payflow Support page](https://verbb.io/craft-plugins/paypal-payflow/support) or by [creating a Github issue](https://github.com/verbb/commerce-payflow/issues)
+
+Get in touch with us via the [PayPal Payflow Support page](https://verbb.io/craft-plugins/paypal-payflow/support) or by [creating a GitHub issue](https://github.com/verbb/commerce-payflow/issues).
 
 ## Sponsor
-PayPal Payflow is licensed under the MIT license, meaning it will always be free and open source - we love free stuff! If you'd like to show your support to the plugin regardless, [Sponsor](https://github.com/sponsors/verbb) development.
+
+PayPal Payflow is licensed under the MIT license, so it will always be free and open source. If you'd like to support it anyway, you can [sponsor its development](https://github.com/sponsors/verbb).
 
 <h2></h2>
 

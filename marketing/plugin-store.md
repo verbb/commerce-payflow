@@ -8,5 +8,3 @@ Add a PayPal Payflow gateway alongside the store's other Craft Commerce gateways
 - Configure the partner, vendor, user, and password for the Payflow account.
 - Exercise payments against Payflow's test environment before launch.
 - Keep payment activity attached to the order's normal transaction history.
-- Handle gateway communication through the Craft Commerce backend.
-- Configure the gateway through Commerce alongside other payment options.
