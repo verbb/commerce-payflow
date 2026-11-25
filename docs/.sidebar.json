@@ -7,5 +7,12 @@
             "get-started/testing-a-payflow-payment",
             "get-started/requirements"
         ]
+    },
+    {
+        "title": "Developers",
+        "collapsable": false,
+        "children": [
+            "developers/changing-transaction-comments"
+        ]
     }
 ]
