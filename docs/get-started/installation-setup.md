@@ -2,7 +2,7 @@
 You can install PayPal Payflow via the plugin store, or through Composer.
 
 ## Craft Plugin Store
-To install **PayPal Payflow**, navigate to the _Plugin Store_ section of your Craft control panel, search for `PayPal Payflow`, and click the _Try_ button.
+To install **PayPal Payflow**, navigate to the _Plugin Store_ section of your Craft control panel, search for `PayPal Payflow`, and click the _Install_ button.
 
 ## Composer
 You can also add the package to your project using Composer and the command line.
@@ -17,5 +17,5 @@ cd /path/to/project
 composer require verbb/commerce-payflow && php craft plugin/install commerce-payflow
 ```
 
-## Setup
+## First Steps
 To add the payment gateway, go to **Commerce** → **Settings** → **Gateways**, create a new gateway, and set the gateway type to `Payflow`.
