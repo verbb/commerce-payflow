@@ -22,7 +22,5 @@ A payment for an order with the number `1a2b3c4d…` now shows `Order 1a2b3c4` a
 
 The event is triggered for purchases, authorizations, captures and refunds, so the same comments follow the order through each of its transactions. Check `$event->type` against the transaction types in `craft\commerce\records\Transaction` if you only want to change some of them.
 
-The `buildGatewayRequest` event requires Commerce Omnipay 4.2.0 or later. Run `composer show craftcms/commerce-omnipay` in your project root to see the installed version, and `composer update craftcms/commerce-omnipay` to update it.
-
 ## Using the Order Reference
 The order reference can’t be used in a comment for a payment. Commerce generates the reference when it marks the order complete, which happens after the payment succeeds, so `$order->reference` is still empty when the payment request is built. Use the order number or short number instead, since every cart has these before it’s paid.

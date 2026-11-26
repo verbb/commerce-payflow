@@ -5,6 +5,9 @@
 ### Added
 - Added docs for changing the Comment1 and Comment2 values sent to Payflow. ([#3](https://github.com/verbb/commerce-payflow/issues/3))
 
+### Changed
+- Now requires Commerce Omnipay `4.2.0+`.
+
 ## 4.0.5 - 2026-10-17
 
 ### Fixed
